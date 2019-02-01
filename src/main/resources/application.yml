@@ -3,7 +3,7 @@ zuul:
     configuration-api:
       path: /wynats-configuration-api/**
       #serviceId: wynats-configuration-api
-      url: http://localhost:8081
+      url: http://configuration:8081
       stripPrefix: false
       
 # Discovery Server Access
