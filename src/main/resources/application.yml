@@ -8,6 +8,10 @@ zuul:
       path: /component/** 
       serviceId: WYNATS-CONFIGURATION-API 
       stripPrefix: false
+    portfolio-api:
+      path: /portfolio/** 
+      serviceId: WYNATS-PORTFOLIO-API 
+      stripPrefix: false
       
 # Discovery Server Access
 eureka:
