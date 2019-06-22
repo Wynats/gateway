@@ -25,5 +25,5 @@ server:
   port: 8080   # HTTP (Tomcat) port
   
 gateway:
-  excludedPaths: /login, /test
+  excludedPaths: /login, /test, /workers
      
