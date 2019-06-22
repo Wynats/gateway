@@ -22,8 +22,9 @@ public class WynatsGatewayApiApplication {
         return new LoggerFilter();
     }
 	
-	@Bean
+	/*@Bean
 	public JwtFilter preFilterJwt() {
         return new JwtFilter();
     }
+    */
 }

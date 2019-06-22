@@ -9,7 +9,7 @@ zuul:
       serviceId: WYNATS-CONFIGURATION-API 
       stripPrefix: false
     portfolio-api:
-      path: /portfolio/** 
+      path: /workers/** 
       serviceId: WYNATS-PORTFOLIO-API 
       stripPrefix: false
       
