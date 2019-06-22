@@ -5,11 +5,11 @@ spring:
 zuul:
   routes:
     configuration-api:
-      path: /wynats-configuration-api/** 
+      path: /component/** 
       serviceId: WYNATS-CONFIGURATION-API 
       stripPrefix: false
     portfolio-api:
-      path: /wynats-portfolio-api/** 
+      path: /workers/** 
       serviceId: WYNATS-PORTFOLIO-API 
       stripPrefix: false
       
