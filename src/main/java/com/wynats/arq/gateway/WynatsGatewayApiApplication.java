@@ -6,6 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
+import com.wynats.arq.gateway.filter.JwtFilter;
 import com.wynats.arq.gateway.filter.LoggerFilter;
 
 @SpringBootApplication
@@ -20,4 +21,10 @@ public class WynatsGatewayApiApplication {
 	public LoggerFilter preFilter() {
         return new LoggerFilter();
     }
+	
+	@Bean
+	public JwtFilter preFilterJwt() {
+        return new JwtFilter();
+    }
+    
 }

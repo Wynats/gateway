@@ -1,18 +1,29 @@
+# Spring properties
+spring:
+  application:
+     name: wynats-gateway-api
 zuul:
   routes:
     configuration-api:
-      path: /wynats-configuration-api/**
-      #serviceId: wynats-configuration-api
-      url: http://configuration:8081
+      path: /component/** 
+      serviceId: WYNATS-CONFIGURATION-API 
+      stripPrefix: false
+    portfolio-api:
+      path: /workers/** 
+      serviceId: WYNATS-PORTFOLIO-API 
       stripPrefix: false
       
 # Discovery Server Access
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: false # El gateway no se registra, solo los microservicios
+   # fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
  
 server:
   port: 8080   # HTTP (Tomcat) port
-      
+  
+gateway:
+  excludedPaths: /login, /test, /workers
+     
