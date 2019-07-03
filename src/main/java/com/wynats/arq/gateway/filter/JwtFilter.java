@@ -33,8 +33,8 @@ public class JwtFilter extends ZuulFilter {
 		RequestContext ctx = RequestContext.getCurrentContext();
 		HttpServletRequest request = ctx.getRequest();
 		String currentPath= request.getRequestURI();
-		int start= currentPath.indexOf("/", 1);
-		int end = currentPath.indexOf("/", start+1);
+		int start= currentPath.indexOf('/', 1);
+		int end = currentPath.indexOf('/', start+1);
 		String path="";
 		if(end==-1){
 			path=currentPath.substring(start);
